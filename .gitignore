@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# CivicLoop data and models (see CLAUDE.md)
+data/
+models/
+mlruns/
+
+# Local learning notes
+.vibe-wise/
