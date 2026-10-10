@@ -1,0 +1,44 @@
+{
+  "case_id": "C-0005",
+  "created_at": "2026-09-05T09:00:00Z",
+  "status": "resolved",
+  "report": {
+    "model_version": "fixture",
+    "confidence": 0.9,
+    "explanation": "Hand-written fixture.",
+    "report_id": "R-0005",
+    "submitted_at": "2026-09-05T09:00:00Z",
+    "original_text": "Pipe leak ho raha hai mandir ke paas, poora din paani waste ho raha hai",
+    "language": "mixed",
+    "english_text": "Pipe is leaking near the temple, water is being wasted all day",
+    "issue_type": "water_leak",
+    "location_text": "near the temple",
+    "location": {
+      "lat": 28.63348,
+      "lon": 77.22207
+    },
+    "cues": {
+      "children": false,
+      "accident": false,
+      "flooding": false
+    },
+    "image_paths": []
+  },
+  "ward": "W03",
+  "image_features": [],
+  "triage": {
+    "model_version": "stub",
+    "confidence": 0.5,
+    "explanation": "Severity low: no risk cues.",
+    "case_id": "C-0005",
+    "severity": "low"
+  },
+  "routing": {
+    "model_version": "stub",
+    "confidence": 0.9,
+    "explanation": "Issue type 'water_leak' is handled by Water Supply.",
+    "case_id": "C-0005",
+    "department": "Water Supply",
+    "ward": "W03"
+  }
+}

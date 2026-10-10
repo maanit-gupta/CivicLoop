@@ -1,0 +1,16 @@
+{
+  "id": "jagpreetsingh02/civicloop-yolo-v1",
+  "title": "CivicLoop YOLO v1",
+  "code_file": "../yolo_finetune.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_tpu": "false",
+  "enable_internet": "true",
+  "machine_shape": "NvidiaTeslaT4",
+  "dataset_sources": ["jagpreetsingh02/civicloop-vision-yolo"],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

@@ -2,13 +2,25 @@
 __pycache__/
 *.pyc
 .venv/
+*.egg-info/
 .pytest_cache/
 .ruff_cache/
 
-# CivicLoop data and models (see CLAUDE.md)
-data/
-models/
+# Generated artifacts: keep the folders, ignore the contents (see CLAUDE.md).
+data/*
+!data/.gitkeep
+!data/world/
+data/world/*
+!data/world/departments.yaml
+!data/vision/
+data/vision/*
+!data/vision/SOURCES.md
+models/*
+!models/.gitkeep
 mlruns/
 
 # Local learning notes
 .vibe-wise/
+
+# Personal Claude Code settings
+.claude/settings.local.json

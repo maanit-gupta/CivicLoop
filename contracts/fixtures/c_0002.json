@@ -1,0 +1,29 @@
+{
+  "case_id": "C-0002",
+  "created_at": "2026-09-02T09:00:00Z",
+  "status": "open",
+  "report": {
+    "model_version": "fixture",
+    "confidence": 0.9,
+    "explanation": "Hand-written fixture.",
+    "report_id": "R-0002",
+    "submitted_at": "2026-09-02T09:00:00Z",
+    "original_text": "Streetlight not working on 3rd cross street for a week",
+    "language": "en",
+    "english_text": "Streetlight not working on 3rd cross street for a week",
+    "issue_type": "streetlight",
+    "location_text": "3rd cross street",
+    "location": {
+      "lat": 28.61516,
+      "lon": 77.21893
+    },
+    "cues": {
+      "children": false,
+      "accident": false,
+      "flooding": false
+    },
+    "image_paths": []
+  },
+  "ward": "W07",
+  "image_features": []
+}

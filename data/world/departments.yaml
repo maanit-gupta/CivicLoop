@@ -1,0 +1,22 @@
+# Hand-written (not generated). Departments of synthetic Delhi, the issue types each one
+# handles, and SLA hours per severity. SLA numbers: user decision, Step 0.4.
+# Every IssueType must appear under exactly one department (checked by tests).
+departments:
+  Roads:
+    issue_types: [pothole, other]
+    sla_hours: {low: 168, medium: 72, high: 24, critical: 6}
+  Electrical:
+    issue_types: [streetlight]
+    sla_hours: {low: 72, medium: 48, high: 24, critical: 4}
+  Sanitation:
+    issue_types: [garbage]
+    sla_hours: {low: 48, medium: 24, high: 12, critical: 4}
+  Water Supply:
+    issue_types: [water_leak]
+    sla_hours: {low: 72, medium: 24, high: 8, critical: 2}
+  Stormwater Drains:
+    issue_types: [drain_blockage]
+    sla_hours: {low: 120, medium: 48, high: 12, critical: 4}
+  Traffic & Signage:
+    issue_types: [damaged_sign]
+    sla_hours: {low: 168, medium: 72, high: 24, critical: 6}

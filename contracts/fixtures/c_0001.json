@@ -1,0 +1,44 @@
+{
+  "case_id": "C-0001",
+  "created_at": "2026-09-01T09:00:00Z",
+  "status": "open",
+  "report": {
+    "model_version": "fixture",
+    "confidence": 0.9,
+    "explanation": "Hand-written fixture.",
+    "report_id": "R-0001",
+    "submitted_at": "2026-09-01T09:00:00Z",
+    "original_text": "Big pothole outside the government school gate, kids walk around it",
+    "language": "en",
+    "english_text": "Big pothole outside the government school gate, kids walk around it",
+    "issue_type": "pothole",
+    "location_text": "near Govt school gate",
+    "location": {
+      "lat": 28.636,
+      "lon": 77.22286
+    },
+    "cues": {
+      "children": true,
+      "accident": false,
+      "flooding": false
+    },
+    "image_paths": []
+  },
+  "ward": "W03",
+  "image_features": [],
+  "triage": {
+    "model_version": "stub",
+    "confidence": 0.5,
+    "explanation": "Severity medium: children nearby.",
+    "case_id": "C-0001",
+    "severity": "medium"
+  },
+  "routing": {
+    "model_version": "stub",
+    "confidence": 0.9,
+    "explanation": "Issue type 'pothole' is handled by Roads.",
+    "case_id": "C-0001",
+    "department": "Roads",
+    "ward": "W03"
+  }
+}

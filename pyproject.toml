@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "civicloop"
+version = "0.1.0"
+description = "Civic complaint to verified fix: independent, testable ML modules."
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "pydantic>=2.6",
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "shapely>=2.0",
+    "pyyaml>=6.0",
+    "pyarrow>=15",  # parquet: the shared complaint corpus (Step 0.5)
+    "pytest>=8",
+    "ruff>=0.5",
+]
+
+[project.optional-dependencies]
+triage = ["lightgbm>=4.3", "scikit-learn>=1.4", "mlflow>=2.12", "pyarrow>=15"]
+router = ["lightgbm>=4.3", "scikit-learn>=1.4", "mlflow>=2.12", "pyarrow>=15"]
+trainer = ["lightgbm>=4.3", "scikit-learn>=1.4", "mlflow>=2.12", "pyarrow>=15"]
+# transformers < 5: IndicTransToolkit 1.1.1 and IndicTrans2's remote code need the 4.x API.
+intake = ["faster-whisper>=1.0", "transformers>=4.40,<5", "torch>=2.3", "sentencepiece>=0.2",
+          "IndicTransToolkit>=1.1", "sacrebleu>=2.4", "langdetect>=1.0.9", "ollama>=0.2",
+          "pillow>=10.3"]  # pillow: photo EXIF (Step 4.4)
+vision = ["ultralytics>=8.2", "open_clip_torch>=2.24", "pillow>=10.3"]
+verifier = ["imagehash>=4.3", "scikit-learn>=1.4", "pillow>=10.3"]
+
+[tool.setuptools]
+packages = ["contracts", "triage", "router", "trainer", "intake", "vision", "verifier"]
+py-modules = ["config"]
+
+[tool.pytest.ini_options]
+# importlib mode: each module has its own tests/ folder without name clashes.
+addopts = "--import-mode=importlib -q"
+testpaths = ["contracts", "triage", "router", "trainer", "intake", "vision", "verifier"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["notebooks"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
